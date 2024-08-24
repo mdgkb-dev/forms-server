@@ -13,12 +13,9 @@ type AnswerVariant struct {
 	Field         *Field        `bun:"rel:belongs-to" json:"field"`
 	Order         int           `bun:"item_order" json:"order"`
 	Score         int           `json:"score"`
-	// ShowMoreFields bool          `json:"showMoreFields"`
-	// RegisterPropertyOthers          RegisterPropertyOthers `bun:"rel:has-many" json:"registerPropertyOthers"`
-	// RegisterPropertyOthersForDelete []uuid.UUID            `bun:"-" json:"registerPropertyOthersForDelete"`
 
 	AggregatedValues map[string]float64 `bun:"-" json:"aggregatedValues"`
-	// RegisterQueryPercentages ResearchQueryPercentages `bun:"-" `
+	IsMatrixY        bool               `bun:"is_matrix_y" json:"isMatrixY"`
 }
 
 type AnswerVariants []*AnswerVariant

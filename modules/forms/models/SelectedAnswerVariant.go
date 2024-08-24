@@ -12,7 +12,9 @@ type SelectedAnswerVariant struct {
 	FieldFillId uuid.NullUUID `bun:"type:uuid" json:"fieldFillId"`
 
 	// AnswerVariant   *AnswerVariant `bun:"rel:belongs-to" json:"answerVariant"`
-	AnswerVariantID uuid.NullUUID `bun:"type:uuid" json:"answerVariantId"`
+
+	AnswerVariantID  uuid.NullUUID `bun:"type:uuid" json:"answerVariantId"`
+	AnswerVariantIDY uuid.NullUUID `bun:"answer_variant_id_y,type:uuid" json:"answerVariantIdY"`
 }
 
 type SelectedAnswerVariants []*SelectedAnswerVariant
